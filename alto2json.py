@@ -32,7 +32,7 @@ for dirName, subdirList, fileList in os.walk(rootDir):
                     'date' : doc['pageOCRData']['metadata']['published']['#text'],
                     'lang' : doc['pageOCRData']['metadata']['language'],
                     'URL' : doc['pageOCRData']['metadata']['imageURL'],
-                    'text' : doc['pageOCRData']['content']['text']['#text'].replace('\n', ' ').replace('\r', ' ')
+                    'text' : doc['pageOCRData']['content']['text']['#text']
                 }
             except KeyError:
                 data = {
